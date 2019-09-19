@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ticTacToeBoard", "ticTacToeBoard\ticTacToeBoard.vcxproj", "{C4DB15C8-1B73-4879-9284-57D2FFF06706}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "readInPrintOut", "readInPrintOut\readInPrintOut.vcxproj", "{5C3AC00A-8477-475B-8C5E-A387F9008326}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum", "enums\enums.vcxproj", "{20A78ABF-07ED-4BD5-B789-AFA7079BDB89}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enumClass", "enumClass\enumClass.vcxproj", "{D118A849-8A59-401C-A548-7917EE764767}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lowestTemp", "lowestTemp\lowestTemp.vcxproj", "{5567E59B-EB51-45E6-AAAF-4C193126AB40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4DB15C8-1B73-4879-9284-57D2FFF06706}.Debug|x86.ActiveCfg = Debug|Win32
+		{C4DB15C8-1B73-4879-9284-57D2FFF06706}.Debug|x86.Build.0 = Debug|Win32
+		{C4DB15C8-1B73-4879-9284-57D2FFF06706}.Release|x86.ActiveCfg = Release|Win32
+		{C4DB15C8-1B73-4879-9284-57D2FFF06706}.Release|x86.Build.0 = Release|Win32
+		{5C3AC00A-8477-475B-8C5E-A387F9008326}.Debug|x86.ActiveCfg = Debug|Win32
+		{5C3AC00A-8477-475B-8C5E-A387F9008326}.Debug|x86.Build.0 = Debug|Win32
+		{5C3AC00A-8477-475B-8C5E-A387F9008326}.Release|x86.ActiveCfg = Release|Win32
+		{5C3AC00A-8477-475B-8C5E-A387F9008326}.Release|x86.Build.0 = Release|Win32
+		{20A78ABF-07ED-4BD5-B789-AFA7079BDB89}.Debug|x86.ActiveCfg = Debug|Win32
+		{20A78ABF-07ED-4BD5-B789-AFA7079BDB89}.Debug|x86.Build.0 = Debug|Win32
+		{20A78ABF-07ED-4BD5-B789-AFA7079BDB89}.Release|x86.ActiveCfg = Release|Win32
+		{20A78ABF-07ED-4BD5-B789-AFA7079BDB89}.Release|x86.Build.0 = Release|Win32
+		{D118A849-8A59-401C-A548-7917EE764767}.Debug|x86.ActiveCfg = Debug|Win32
+		{D118A849-8A59-401C-A548-7917EE764767}.Debug|x86.Build.0 = Debug|Win32
+		{D118A849-8A59-401C-A548-7917EE764767}.Release|x86.ActiveCfg = Release|Win32
+		{D118A849-8A59-401C-A548-7917EE764767}.Release|x86.Build.0 = Release|Win32
+		{5567E59B-EB51-45E6-AAAF-4C193126AB40}.Debug|x86.ActiveCfg = Debug|Win32
+		{5567E59B-EB51-45E6-AAAF-4C193126AB40}.Debug|x86.Build.0 = Debug|Win32
+		{5567E59B-EB51-45E6-AAAF-4C193126AB40}.Release|x86.ActiveCfg = Release|Win32
+		{5567E59B-EB51-45E6-AAAF-4C193126AB40}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAA12106-0F24-4EBA-9B9D-20FBE6EB05E3}
+	EndGlobalSection
+EndGlobal

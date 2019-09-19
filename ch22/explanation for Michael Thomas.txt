@@ -1,0 +1,6 @@
+The lists example in the text ("lists" folder) has some functions taken out to be left as exercises. 
+So running it is not a good test of anything. Run "listsCompleteDoNotInclude" instead to verify
+that the code works.
+
+Best,
+Will
