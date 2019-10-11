@@ -1,6 +1,0 @@
-powerupsExercise is code needed for two exercises in this chapter.  It runs -- balls bounce, and you can click on a ball and get -1 added to score.
-
-powerupsExerciseSolution is a complete solution to both exercises.  It runs correctly: when you click a ball, there's an animation that runs, and something positive is added to score.  How much, and what animation, depends on the ball.
-
-Best,
-Will
