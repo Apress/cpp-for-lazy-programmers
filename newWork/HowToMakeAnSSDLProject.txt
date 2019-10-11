@@ -1,0 +1,41 @@
+How do you create a project that works with Lazy Programmers source code?
+
+MinGW:  
+
+Copy the basicSSDLProject folder in the newWork subfolder, and rename it appropriately; 
+keep it in this newWork folder so the relative paths to the
+include and library directories still work.  Rename its Makefile.mingw to Makefile, and type make.
+To run, type bash mingw
+
+Unix:
+
+Copy the basicSSDLProject folder in the newWork subfolder, and rename it appropriately.  
+Rename its Makefile.unix to Makefile, and type make.
+To run, type ./runx
+
+Microsoft Visual Studio:
+
+Either
+
+Copy the basicSSDLProject or basicSSDLProjectForVS2019 folder in the newWork subfolder, and rename it appropriately; 4
+keep it in this newWork folder so the relative paths to the include and library directories still work.
+
+or
+
+Create one like it, thus.  Start with Empty Project, and alter Project Properties.
+The following (except as stated below) applies to All Configurations.
+
+* Configuration Properties > C/C++ > General > Additional Include Directories should
+  have paths to include files for SDL2, SDL2_Image, SDL2_Mixer, SDL2_ttf, and SSDL.
+* Configuration Properties > C/C++ > Code Generation > Runtime Library should be
+  /MTd if you are doing a Debug build;
+  /MT  if you are doing a Release build.
+* Configuration Properties > Linker > General > Additional Library Directories should
+  have paths to library files for SDL2, SDL2_Image, SDL2_Mixer, SDL2_ttf, and SSDL.
+* Configuration Properties > Linker > Input > Additional Dependencies should contain
+  ssdl$(Configuration).lib (that is, ssdl_Debug.lib or ssdl_Release.lib depending
+  on which you're doing), as well as
+  sdl2.lib;SDL2main.lib;sdl2_image.lib;sdl2_ttf.lib;sdl2_mixer.lib.
+* Configuration Properties > Linker > System > SubSystem should be set to
+  Windows (/SUBSYSTEM:WINDOWS)
+

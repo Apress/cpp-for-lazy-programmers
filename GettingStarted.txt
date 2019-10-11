@@ -1,0 +1,59 @@
+To create your own programs with SSDL, see the newWork folder.
+
+========== How to use example SSDL programs ====================
+
+Microsoft Visual Studio:
+
+To run example programs with Microsoft Visual Studio, open SSDL_Project.sln 
+in the chapter folder.  
+
+To run a particular project, either right-click on the project and select 
+Debug > Start New Instance; or right-click on the project and select Set as 
+Startup Project, then run as you usually would a Visual Studio project.
+
+
+MinGW:
+
+To run example programs with MinGW, 
+  go the the project folder; 
+  copy Makefile.mingw to Makefile; 
+  make; and enter 
+  bash mingw.  
+To debug,
+  bash gdbw.
+
+Unix:
+
+To run example programs with Unix, 
+  go the the project folder; 
+  copy Makefile.unix to Makefile; 
+  make; and enter 
+  ./runx
+To debug,
+  ./dddx or ./gdbx.
+If those last two files are not present you can copy them from newWork/basicSSDLProject.
+
+(Unix) You'll need SDL2, SDL2_Image, SDL2_Mixer, and SDL2_TTF installed.  
+If you copy libssdl.so into an appropriate folder (say, the same one where 
+SDL2*'s libraries are), you can skip ./runx and run the program as ./a.out; to
+debug, you can skip ./dddx and ./gdbx and debug with ddd a.out or gdb a.out.
+
+
+========== Possible problems running example programs ==========
+
+If the system says it can't find SSDL or (MinGW/Visual Studio) SDL2, be sure you 
+haven't moved the folder from its position in this code repository. 
+
+If a Unix system complains it can't find SDL2, try reinstalling SDL2.
+
+Microsoft Visual Studio builds:
+
+If you Build All on a solution that shares source files, you may get a 
+complaint that it is unable to build one or more project; but successive 
+Build Alls will get them all.  This is because it is trying to build in 
+parallel.  To fix this, Tools > Options > Projects and 
+Solutions > Build and Run; set maximum number of parallel builds to 1.
+
+You may get complaints while building that it cannot find the PDB's for 
+SSDL, SDL*, or various other .lib's or .dll's.  You can ignore these.
+
