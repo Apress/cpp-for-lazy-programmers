@@ -1,3 +1,0 @@
-Some current bugs.
-
-On my Unix distribution (Ubuntu), I am currently getting some static as I play sound.  2019-3-5.
