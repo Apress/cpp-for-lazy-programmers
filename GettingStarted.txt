@@ -5,7 +5,8 @@ To create your own programs with SSDL, see the newWork folder.
 Microsoft Visual Studio:
 
 To run example programs with Microsoft Visual Studio, open SSDL_Project.sln 
-in the chapter folder.  
+in the chapter folder.  If you are using Visual Studio 2019, accept its offer to
+upgrade the solution.
 
 To run a particular project, either right-click on the project and select 
 Debug > Start New Instance; or right-click on the project and select Set as 
