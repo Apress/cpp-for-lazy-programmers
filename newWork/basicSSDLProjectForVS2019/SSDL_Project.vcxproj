@@ -62,7 +62,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>ssdl_Debug.lib;sdl2.lib;SDL2main.lib;sdl2_image.lib;sdl2_ttf.lib;sdl2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>..\..\external\SDL2\lib\x86;..\..\external\SSDL\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\external\SDL2\lib\x86;..\..\external\SSDL\libvs\Win32</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
