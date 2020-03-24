@@ -16,7 +16,7 @@ Startup Project, then run as you usually would a Visual Studio project.
 MinGW:
 
 To run example programs with MinGW, 
-  go the the project folder; 
+  go to the project folder; 
   copy Makefile.mingw to Makefile; 
   make; and enter 
   bash mingw.  
@@ -26,7 +26,7 @@ To debug,
 Unix:
 
 To run example programs with Unix, 
-  go the the project folder; 
+  go to the project folder; 
   copy Makefile.unix to Makefile; 
   make; and enter 
   ./runx
@@ -39,6 +39,20 @@ If you copy libssdl.so into an appropriate folder (say, the same one where
 SDL2*'s libraries are), you can skip ./runx and run the program as ./a.out; to
 debug, you can skip ./dddx and ./gdbx and debug with ddd a.out or gdb a.out.
 
+macOS:
+
+To run example programs with macOS,
+  go to the project folder;
+  copy Makefile.unix to Makefile;
+  make; and enter
+  ./runm
+
+(macOS) You'll need SDL2, SDL2_Image, SDL2_Mixer, and SDL2_TTF installed.
+The easiest way to install these is through Homebrew (https://brew.sh).
+After installing Homebrew, execute the command `brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf`.
+
+(Unix and macOS) You'll need SSDL installed.
+Follow the instructions at external/SSDL/unix/readme.txt.
 
 ========== Possible problems running example programs ==========
 

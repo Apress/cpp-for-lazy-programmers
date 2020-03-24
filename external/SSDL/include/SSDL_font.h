@@ -55,6 +55,8 @@ TTF_Font* SSDL_OpenFont		  (const char* filename, int point);
 #define FONT_PATH "C:\\Windows\\Fonts\\"
 #elif __unix__
 #define FONT_PATH "/usr/share/fonts/truetype/msttcorefonts/"
+#elif __APPLE__
+#define FONT_PATH "/System/Library/Fonts/"
 #endif
 
 inline

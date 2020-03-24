@@ -1,0 +1,4 @@
+a.out
+*.o
+libssdl.so
+shared-test
