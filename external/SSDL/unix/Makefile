@@ -5,7 +5,7 @@
 #If you decide to use static not shared libraries:
 # take shared libssdl.so shared-test out of the "all" line
 # put static libssdl.a static-test in
-INCLUDE_FLAGS	= `sdl2-config --cflags` -I../include 
+INCLUDE_FLAGS	= -std=c++17 `sdl2-config --cflags` -I../include 
 
 	#What are our source files, and where are they?
 C_SRCS 	= $(wildcard ../src/*.c)
@@ -56,7 +56,7 @@ testSSDL.o:					 ../test/testSSDL.cpp
 libssdl.a:	static			$(STATIC_OBJS)
 	ar rcs libssdl.a 		$(STATIC_OBJS)
 libssdl.so:	shared			$(SHARED_OBJS)
-	g++ -shared 			$(SHARED_OBJS) -o libssdl.so
+	g++ -std=c++17 -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -shared $(SHARED_OBJS) -o libssdl.so
 
 
 

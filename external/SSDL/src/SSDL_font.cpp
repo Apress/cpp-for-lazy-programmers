@@ -27,6 +27,12 @@
 #include "SSDL_exception.h"
 #include "SSDL_display.h"
 
+#ifdef __APPLE__
+#define ARIAL "Supplemental/Arial.ttf"
+#else
+#define ARIAL "arial.ttf"
+#endif
+
 using namespace std;
 
 class CurrentFontSingletonClass
@@ -43,7 +49,7 @@ public:
 private:
 	CurrentFontSingletonClass()
 	{
-		currentFont_ = SSDL_OpenSystemFont("arial.ttf", 14);
+		currentFont_ = SSDL_OpenSystemFont(ARIAL, 14);
 		TTF_SetFontStyle(currentFont_, TTF_STYLE_BOLD);
 	}
 	TTF_Font* currentFont_;

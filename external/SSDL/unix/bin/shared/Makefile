@@ -2,7 +2,7 @@
 # Adapt as needed
 #  -- from _C++ for Lazy Programmers_, but I claim no copyright
 
-INCLUDE_FLAGS	= `sdl2-config --cflags` -I../../../include #-I../../../external/SDL2/include
+INCLUDE_FLAGS	= -std=c++17 `sdl2-config --cflags` -I../../../include #-I../../../external/SDL2/include
 
 	#What are our source files, and where are they?
 C_SOURCES 	= $(wildcard ../../../src/*.c)
