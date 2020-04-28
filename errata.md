@@ -1,4 +1,13 @@
-# Errata for *Book Title*
+# Errata for *C++ for Lazy Programmers*
+
+On **page 186** [Typos]:
+ 
+The second sentence in Exercise 3 should say:
+
+**The solutions are (-b+sqrt(b^2-4ac)/2a and (-b-sqrt(b^2-4ac)/2a **
+**(the - sign after the b is the difference).**.
+
+***
 
 On **page 596** [Missing entry]:
 
