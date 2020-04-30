@@ -9,6 +9,13 @@ The second sentence in Exercise 3 should say:
 
 ***
 
+On **page 356** [Typo]:
+
+The second sentence of the third paragraph of the Binary and unary operators
+section should say not "the one that owns this operator< function," but
+
+**the one that owns this operator== function**
+
 On **page 596** [Missing entry]:
 
 There should also be an entry under the **Set** heading:
