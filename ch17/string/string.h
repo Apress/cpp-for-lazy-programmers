@@ -13,7 +13,9 @@
 class String 
 {
 public:
-    enum {BIGGEST_READABLE_STRING_PLUS_ONE   = 256};
+	//WSB: This should really be constinit, but it can't be till compiler supports it
+	//WSB: Looks like I had to already explain static, and it can't be optional
+    static constexpr int BIGGEST_READABLE_STRING_PLUS_ONE   = 256; //WSB: do I need to say inline, or is it already?
                       //biggest string we can read, incl '\0'
 
     String (const char* other="") { copy(other);             }
@@ -33,31 +35,14 @@ public:
 
     //comparison operators
 
-    bool operator< (const String& other) const
-    {
-        return strcmp (c_str(), other.c_str()) <  0;
-    }
-    bool operator> (const String& other) const
-    {
-        return strcmp (c_str(), other.c_str()) >  0;
-    }
-    bool operator<= (const String& other) const
-    {
-        return strcmp (c_str(), other.c_str()) <= 0;
-    }
-    bool operator>= (const String& other) const
-    {
-        return strcmp (c_str(), other.c_str()) >= 0;
-    }
     bool operator== (const String& other) const
     {
-        return strcmp (c_str(), other.c_str()) == 0;
+        return strcmp(c_str(), other.c_str()) == 0;
     }
-    //The != operator will work in any class! Just change
-    //  the class name.
-    bool operator!= (const String& other) const 
-    { 
-        return ! (*this == other); 
+    
+    int operator<=> (const String& other) const
+    {
+        return strcmp(c_str(), other.c_str());
     }
 
     //assignment and concatenation

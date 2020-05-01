@@ -10,6 +10,9 @@ void print(Suit);
 
 int main (int argc, char** argv)
 {
+    //using enum class Suit;
+    //using enum class Rank;
+
     Suit firstCardSuit = Suit::HEARTS, secondCardSuit = Suit::SPADES;
                                           //Specifying "Suit::" is required
                                           // for enum class type
