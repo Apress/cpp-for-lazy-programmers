@@ -1,5 +1,20 @@
 # Errata for *C++ for Lazy Programmers*
 
+On **page xxvi** [Content change]:
+
+The first line of the third paragraph should say
+
+** On Unix, you will need ... **
+
+***
+
+On **page xxvi** [Update]:
+
+The second line of the third paragraph should say
+** Microsoft Core fonts for the Web. Look for ttf-mscorefonts-installer and font-freefont-ttf **
+
+***
+
 On **page 186** [Typos]:
  
 The second sentence in Exercise 3 should say:
@@ -24,8 +39,13 @@ There should also be an entry under the **Set** heading:
 
 ***
 
+On **page 599** [Missing text]:
 
+Add this paragraph:
 
+**You will also need Microsoft's Core fonts for the Web (ttf-mscorefonts-installer or msttcore-fonts-<something or other>.**
+
+***
 
 On **page xx** [Summary of error]:
  
