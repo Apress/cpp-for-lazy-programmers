@@ -95,6 +95,23 @@ SSDL_Display::SSDL_Display() : //background_ (0, 0, 0, 255), foreground_ (255, 2
 	SDL_SetRenderDrawColor(sdlRenderer_, 255, 255, 255, 255);
 	//SSDL_SetRenderDrawColor (SSDL_Color(255,255,255));	//So the default color for drawing is WHITE.  I don't use the constant
 														//because I don't _know_ that it's been initialized yet.
+
+	int point = 14;
+	std::string filename = "arial.ttf";
+	std::string newPath(FONT_PATH); newPath += filename; filename = newPath.c_str();
+	
+	std::string finalFilename = filename;
+	if (!matchFromEnd(filename.c_str(), ".ttf")) finalFilename += ".ttf";
+
+	currentFont_ = TTF_OpenFont(finalFilename.c_str(), point);
+	if (!currentFont_)
+	{
+		std::string errorMsg = std::string("Font") + finalFilename + "not found; are fonts installed?";
+		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "SDL Error", errorMsg.c_str(), NULL);
+		throw SSDL_Exception(errorMsg.c_str());
+	}
+	
+	TTF_SetFontStyle(currentFont_, TTF_STYLE_BOLD);
 }
 
 SSDL_Display::~SSDL_Display ()
@@ -117,6 +134,16 @@ SSDL_Display::~SSDL_Display ()
 	SDL_DestroyWindow(sdlWindow_); //not needed, but OK
 	SDL_Quit ();
 }
+
+TTF_Font* SSDL_GetCurrentFont()
+{
+	return SSDL_Display::Instance().currentFont();
+}
+void SSDL_SetFont(TTF_Font* newFont)
+{
+	SSDL_Display::Instance().setCurrentFont(newFont);
+}
+
 
 void SSDL_RenderImage (SDL_Texture* image, int x, int y, int stretchWidth, int stretchHeight)
 {

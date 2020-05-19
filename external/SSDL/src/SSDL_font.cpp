@@ -29,35 +29,6 @@
 
 using namespace std;
 
-class CurrentFontSingletonClass
-{
-public:
-	static CurrentFontSingletonClass& Instance() 
-	{ 
-		static CurrentFontSingletonClass myCurrentFontSingletonClass; 
-		return myCurrentFontSingletonClass; 
-	}
-
-	TTF_Font* currentFont() const   { return currentFont_;    }
-	void setFont(TTF_Font* newFont) { currentFont_ = newFont; }
-private:
-	CurrentFontSingletonClass()
-	{
-		currentFont_ = SSDL_OpenSystemFont("arial.ttf", 14);
-		TTF_SetFontStyle(currentFont_, TTF_STYLE_BOLD);
-	}
-	TTF_Font* currentFont_;
-};
-
-TTF_Font* SSDL_GetCurrentFont()
-{
-	return CurrentFontSingletonClass::Instance().currentFont();
-}
-void SSDL_SetFont(TTF_Font* newFont) 
-{
-	CurrentFontSingletonClass::Instance().setFont(newFont);
-}
-
 bool matchFromEnd (const char* str, const char* substr) 
 {
     char* strEnd    = (char*) str+strlen(str)-1;

@@ -42,7 +42,7 @@ public:
 
 	static SSDL_Display& Instance ()
 	{
-		static SSDL_Display myInstance;
+ 		static SSDL_Display myInstance;
 		return myInstance;
 	}	
 
@@ -76,13 +76,13 @@ public:
 	const SSDL_Color& background () const { return background_; }
 	void	 setBackground (const SSDL_Color& c) { background_ = c; }
 
+	TTF_Font* currentFont() const { return currentFont_; }
+	void setCurrentFont(TTF_Font* newFont) { currentFont_ = newFont; }
+
 private:
 	SDL_Window*   sdlWindow_;
 	SDL_Renderer* sdlRenderer_;
-	//SDL_Surface*  sdlSurface_; 
-	//I am no longer keeping sdlSurface_.  If I need it, I can get it at the last minute
-	// with SDL_GetWindowSurface(sdlWindow_) -- but I must not destroy it, or rely on it if something changes
-	// like a resize
+	TTF_Font*	  currentFont_;
 	SSDL_Color	  background_;
 
 	bool		  isTimeToQuit_;
