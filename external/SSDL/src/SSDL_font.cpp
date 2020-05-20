@@ -29,6 +29,36 @@
 
 using namespace std;
 
+class CurrentFontSingletonClass
+{
+public:
+	static CurrentFontSingletonClass& Instance() 
+	{ 
+		static CurrentFontSingletonClass myCurrentFontSingletonClass; 
+		return myCurrentFontSingletonClass; 
+	}
+
+	TTF_Font* currentFont() const   { return currentFont_;    }
+	void setFont(TTF_Font* newFont) { currentFont_ = newFont; }
+private:
+	CurrentFontSingletonClass()
+	{
+		currentFont_ = SSDL_OpenSystemFont("arialXXXXXXXXX.ttf", 14);
+		if (! currentFont_) throw SSDL_Exception ("Can't open arial.ttf with 14 point. Are fonts installed?"); //5-19-2020
+		TTF_SetFontStyle(currentFont_, TTF_STYLE_BOLD);
+	}
+	TTF_Font* currentFont_;
+};
+
+TTF_Font* SSDL_GetCurrentFont()
+{
+	return CurrentFontSingletonClass::Instance().currentFont();
+}
+void SSDL_SetFont(TTF_Font* newFont) 
+{
+	CurrentFontSingletonClass::Instance().setFont(newFont);
+}
+
 bool matchFromEnd (const char* str, const char* substr) 
 {
     char* strEnd    = (char*) str+strlen(str)-1;

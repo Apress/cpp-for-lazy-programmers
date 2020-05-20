@@ -68,7 +68,4 @@ TTF_Font* SSDL_OpenSystemFont (const char* filename, int point)
 TTF_Font* SSDL_GetCurrentFont(); 
 void      SSDL_SetFont(TTF_Font* newFont); 
 
-	//Useful for adding (or not) ".ttf" to the end of filenames
-bool matchFromEnd(const char* str, const char* substr);
-
 #endif

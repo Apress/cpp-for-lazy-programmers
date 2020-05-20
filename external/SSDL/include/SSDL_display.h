@@ -42,8 +42,8 @@ public:
 
 	static SSDL_Display& Instance ()
 	{
- 		static SSDL_Display myInstance;
-		return myInstance;
+		if (!instance_) instance_ = new SSDL_Display;
+		return *instance_;
 	}	
 
 	void RenderTextLine    (const char* str, int x, int y, const TTF_Font* font, bool isCentered = false); 
@@ -76,13 +76,11 @@ public:
 	const SSDL_Color& background () const { return background_; }
 	void	 setBackground (const SSDL_Color& c) { background_ = c; }
 
-	TTF_Font* currentFont() const { return currentFont_; }
-	void setCurrentFont(TTF_Font* newFont) { currentFont_ = newFont; }
-
 private:
 	SDL_Window*   sdlWindow_;
 	SDL_Renderer* sdlRenderer_;
-	TTF_Font*	  currentFont_;
+	static
+	SSDL_Display* instance_;
 	SSDL_Color	  background_;
 
 	bool		  isTimeToQuit_;
@@ -90,8 +88,6 @@ private:
 	SSDL_Display  ();	
 	~SSDL_Display (); 
 };
-
-
 
 inline bool SSDL_IsQuit      () { return SSDL_Display::Instance().isTimeToQuit(); }
 inline void SSDL_DeclareQuit () { SSDL_Display::Instance().declareTimeToQuit();   }
