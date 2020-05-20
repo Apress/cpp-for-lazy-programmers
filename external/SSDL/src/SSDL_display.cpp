@@ -128,11 +128,16 @@ SSDL_Display::~SSDL_Display ()
 	//if (errorString[0] != '\0') //if there's an error
 	//			SDL_ShowSimpleMessageBox (SDL_MESSAGEBOX_ERROR, "SDL Error", SDL_GetError (), NULL);
 
+	/*
+	5-20-2020 MinGW never returns to the command prompt because of SDL_Quit, which undoubtedly relates
+	  to the unspecified order of constructing/destructing globals between files. Ergo: for now
+	  just don't do it. Fix later.
 	TTF_Quit();
 	IMG_Quit();
 	//SDL_DestroyRenderer (sdlRenderer_); //not needed, but OK //It was noticeably causing delay, so I commented it out
 	SDL_DestroyWindow(sdlWindow_); //not needed, but OK
 	SDL_Quit ();
+	*/
 }
 
 TTF_Font* SSDL_GetCurrentFont()
