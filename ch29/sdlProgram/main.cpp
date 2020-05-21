@@ -42,7 +42,10 @@ int main(int argc, char** argv)
 
     if (TTF_Init() == -1) return -1;         //...and SDL_TTF
 
-                                             //...and SDL_Mixer
+                                            //...and SDL_Mixer
+    int soundsSupported = Mix_Init (MIX_INIT_FLAC|MIX_INIT_MOD|MIX_INIT_MP3|MIX_INIT_OGG);
+    if (!soundsSupported) return -1;
+    
     int soundInitialized = (Mix_OpenAudio(88020, MIX_DEFAULT_FORMAT,
                                           MIX_DEFAULT_CHANNELS, 4096) != -1);
     if (!soundInitialized) SDL_ClearError();
@@ -90,14 +93,14 @@ int main(int argc, char** argv)
     }
 
     
-    //cleanup
-    //If sound system started, close it
-    if (soundInitialized) { Mix_AllocateChannels(0); Mix_CloseAudio(); }
-    TTF_Quit();
-    IMG_Quit();
-    SDL_DestroyRenderer(sdlRenderer);
-    SDL_DestroyWindow(sdlWindow);
-    SDL_Quit();
+    //cleanup      //Cleanup is making Unix barf, so I'll omit it for now
+    //if (soundInitialized) { Mix_AllocateChannels(0); Mix_CloseAudio(); }
+    //Mix_Quit();
+    //TTF_Quit();
+    //IMG_Quit();
+    //SDL_DestroyRenderer(sdlRenderer);
+    //SDL_DestroyWindow(sdlWindow);
+    //SDL_Quit();
 
     return 0;
 }
