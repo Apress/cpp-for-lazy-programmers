@@ -15,6 +15,13 @@ The second line of the third paragraph should say
 
 ***
 
+On **page 2** [Typo]:
+
+Near the middle of the page, change "it's what that" to 
+** it's what **
+
+***
+
 On **page 186** [Typos]:
  
 The second sentence in Exercise 3 should say:
