@@ -29,10 +29,6 @@ int main ()
 
     cout << "If that's right and there were no crashes, "
          << "looks like the list is working.\n";
-
-#ifdef _MSC_VER
-    system ("pause");
-#endif
 */
     return 0;
 }
