@@ -131,7 +131,7 @@ template <typename T>
 void Vector<T>::copy(const Vector& other)
 {
     //set howMany to other's size; allocate that much memory
-    contents_ = new int[howMany_ = other.size()];
+    contents_ = new T[howMany_ = other.size()];
     
     //then copy the elements over
     for (unsigned int i = 0; i < size(); ++i)
