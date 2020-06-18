@@ -1,4 +1,4 @@
-//Example with a Vector of string
+//Test initializer_list ctor/= for Vector
 //      -- from _C++ for Lazy Programmers_
 
 #include <iostream>
