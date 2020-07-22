@@ -4,8 +4,6 @@
 
 #include "SSDL.h"
 
-//SSDL_SoundSystemInitializer initializer(88020, MIX_DEFAULT_FORMAT, AUDIO_U8, 4096);
-
 struct Point2D { int x_, y_; };
 
 void toggleSound            ();
