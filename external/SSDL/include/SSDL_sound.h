@@ -72,7 +72,7 @@ private:
 	bool initializedOK_ = false; //8-7-2017
 };
 
-//An SSDL_SoundSystemInitializer is there to make it easy  to change the paramters to SDL_Mixer's
+//An SSDL_SoundSystemInitialize is there to make it easy  to change the paramters to SDL_Mixer's
 //  Mix_OpenAudio, without messing with SSDL code.  
 //  It is completely optional -- just there if the programmer wants to tweak Mix_OpenAudio's arguments.
 
@@ -87,10 +87,10 @@ private:
 //  Changing the format to AUDIO_U8 or AUDIO_S8 didn't sound good
 //  Changing it to AUDIO_U16LSB, AUDIO_S16LSB, AUDIO_U16MSB, and AUDIO_S16MSB showed no change I could tell
 
-class SSDL_SoundSystemInitializer
+class SSDL_SoundSystemInitialize
 {
 public:
-	SSDL_SoundSystemInitializer(int freq = 88020, Uint16 format = MIX_DEFAULT_FORMAT,
+	SSDL_SoundSystemInitialize(int freq = 88020, Uint16 format = MIX_DEFAULT_FORMAT,
 		int channels = MIX_DEFAULT_CHANNELS, int    chunkSize = 4096)
 	{
 		SSDL_SoundSystem::Instance(freq, format, channels, chunkSize);
