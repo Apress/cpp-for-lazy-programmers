@@ -41,7 +41,7 @@ On **page 119** [Error]:
 
 ***
 
-On **page 133** [Error]:
+On **page 133** [Typo]:
 
 **Change "it's least" to "it's at least" **
 
@@ -144,6 +144,65 @@ section should say not "the one that owns this operator< function," but
 In Example 18-4,
 
 **Change const String& to String&**
+
+***
+
+On **page 467** [Missing line]:
+
+At the end of Example 22-1,
+
+**append the line #endif //LIST_H**
+
+***
+
+On **page 472** [Error]:
+
+First paragraph:
+
+**Change (*currentPointer).next_ to (*newEntry).next_.**
+
+***
+
+On **page 478** [Error]:
+
+Adjust Exercise 4:
+** onstructor taking the data field and, optionally, the next field. -> constructor setting the next field.  **
+
+***
+
+On **page 484** [Typo];
+
+** vec -> myList **
+
+***
+
+On **page 490** [Typo]:
+
+On second line of Antibugging,
+
+** container -> vector **
+
+***
+
+On **page 494** [Typos]:
+
+**Examples 24-2 and 24-3 -> Examples 24-3 and 24-4**
+
+***
+
+On **page 502** [Needed contents];
+
+Append at bottom of page
+
+**5.	Include the .h file from step 1 as needed to define DECLSPEC throughout. **
+
+***
+
+On **page 504** [Typo]:
+
+On line starting #include "stdafx.h", 
+
+** its -> it's **
 
 ***
 
