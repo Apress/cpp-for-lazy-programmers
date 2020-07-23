@@ -37,14 +37,14 @@ int main ()
     Vector<int> intVector; for (int i = 0; i < 10; ++i) intVector.push_back(i);
     cout << "Some #'s: " << intVector << endl;
 
-        //Set up the Justice League
+        //Set up the superhero list
     Vector<Superhero*> superheroes;
     superheroes.push_back (new Superhero ("Somewhat Competent Boy"));
     superheroes.push_back (new Superhero ("Amazing Girl"));
     superheroes.push_back (new Superhero ("Superpolite Man"));
     superheroes.push_back (new Superhero ("Wunderkind"));
 
-        //Print the Justice League
+        //Print the superhero list
     cout << "The superheroes of Yokohama:  " << superheroes << endl;
 
         //Clean up memory
